@@ -1,10 +1,10 @@
 {
-  "name": "Movies4U Repo",
-  "description": "CloudStream plugin for Movies4U",
+  "name": "Alli Repo",
+  "description": "CloudStream plugin repo by Elly",
   "plugins": [
     {
       "name": "Movies4U",
-      "url": "https://raw.githubusercontent.com/elly73/Movies4U-Repo/main/builds/Movies4U.cs3"
+      "url": "https://raw.githubusercontent.com/elly73/alli/main/builds/Movies4U.cs3"
     }
   ]
 }
