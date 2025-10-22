@@ -1,0 +1,10 @@
+{
+  "name": "Movies4U Repo",
+  "description": "CloudStream plugin for Movies4U",
+  "plugins": [
+    {
+      "name": "Movies4U",
+      "url": "https://raw.githubusercontent.com/elly73/Movies4U-Repo/main/builds/Movies4U.cs3"
+    }
+  ]
+}
