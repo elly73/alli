@@ -1,0 +1,27 @@
+name = "Movies4U"
+version = "1.0"
+type = "movie"
+description = "CloudStream plugin to scrape Movies4U website"
+
+baseUrl = "https://movies4u.contact"
+
+movies {
+    val html = get(baseUrl)
+
+    val movieElements = html.select("div.MovieList-item") // may need update
+
+    movieElements.forEach { el ->
+        val title = el.select("h3.MovieList-title").text()
+        val poster = el.select("img").attr("src")
+        val detailUrl = el.select("a").attr("href")
+
+        movie(title) {
+            poster(poster)
+            url {
+                val detailHtml = get(detailUrl)
+                val videoUrl = detailHtml.select("iframe").attr("src")
+                video(videoUrl)
+            }
+        }
+    }
+}
